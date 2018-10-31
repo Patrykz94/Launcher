@@ -362,7 +362,7 @@
   <metadata name="LauncherToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="buttonAppMiniCiv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonAppMiniCiv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAAAd0SU1FB+IKGAwOLZoD/2cAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJ
@@ -384,16 +384,5 @@
         zqa0ZnxBqEc7W6MCsMWYTfKGqDtLr9fphdkxGBMz/1MA5yEpgBTA/w4gwV9AuWmeLO8NVwAAAABJRU5E
         rkJggg==
 </value>
-  </data>
-  <data name="LabelDescriptionText.Text" xml:space="preserve">
-    <value>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor lorem vitae viverra faucibus. Duis porttitor metus commodo ante pretium finibus. Proin nec viverra felis, ac pellentesque velit. Cras ex eros, eleifend eu nulla vitae, euismod lobortis erat. Duis luctus purus eget tellus vestibulum consequat. Pellentesque lacinia augue fermentum fringilla vulputate. Vivamus vestibulum ullamcorper odio. Fusce euismod tortor magna, eu viverra risus consectetur eu. Vestibulum bibendum urna vulputate, suscipit nulla nec, convallis urna. Nulla facilisi.
-
-Praesent eget est neque. Morbi finibus urna non mi condimentum vehicula. Nunc non ligula malesuada, scelerisque neque vel, viverra leo. Duis auctor arcu et urna pharetra pretium non dignissim lorem. Aenean ultrices auctor sem sed pretium. Nulla sodales dapibus felis sit amet mattis. Vestibulum dictum posuere nisl. Nam libero felis, tristique in massa a, volutpat posuere risus. Aliquam venenatis fermentum justo sagittis ullamcorper. In consequat, arcu in cursus blandit, dolor nibh vehicula justo, auctor dignissim dui lacus vitae turpis. Praesent velit libero, placerat et pulvinar nec, cursus nec neque. Phasellus vel pharetra metus. Phasellus et augue non erat varius bibendum. Aliquam non sem ipsum.
-
-Nam vulputate mi diam, a molestie neque accumsan tempus. Donec at augue neque. Ut faucibus justo id congue lobortis. Nam dui justo, rhoncus vel mi ut, eleifend dapibus dolor. Mauris non libero sollicitudin, rutrum turpis non, tincidunt justo. Aliquam pellentesque libero eu est aliquam, nec lacinia nunc sagittis. Nam urna dolor, ultrices nec eleifend suscipit, pulvinar non nisl. Phasellus tristique dolor tincidunt dolor fringilla fermentum. Ut a dignissim justo, a varius libero. Aenean ultricies varius purus, vitae elementum lorem bibendum sit amet.
-
-Vivamus convallis facilisis pulvinar. Curabitur sit amet velit leo. Donec interdum quam a mi luctus, in interdum nibh pulvinar. Fusce maximus ac metus in vestibulum. Nullam et urna commodo, ornare quam at, vehicula est. Nullam eget magna sed metus fringilla sagittis. Proin placerat nec eros vel commodo. Etiam lacinia consectetur turpis in laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur eu nunc eu elementum. Vestibulum consequat ut nisl quis scelerisque.
-
-Maecenas ultrices mi non justo molestie, sit amet aliquam diam dictum. In auctor vulputate enim dictum pretium. Nunc egestas quis mi hendrerit egestas. Phasellus auctor tristique fringilla. Phasellus porta erat a metus mollis, laoreet feugiat leo varius. Nullam semper, neque ac pellentesque posuere, purus massa interdum dolor, vel varius enim purus nec leo. Ut pharetra ipsum ac pulvinar laoreet. Etiam porttitor leo mi, molestie ornare metus porta ultrices. Mauris vitae molestie justo. Suspendisse a augue finibus, consequat dui maximus, commodo velit. Phasellus nunc sapien, accumsan eu luctus ut, ornare sed urna.</value>
   </data>
 </root>

@@ -40,23 +40,12 @@
             this.ButtonMinimize = new System.Windows.Forms.Button();
             this.ButtonExit = new System.Windows.Forms.Button();
             this.Sidebar = new System.Windows.Forms.Panel();
-            this.buttonAppMiniCiv = new System.Windows.Forms.Button();
+            this.ButtonAppMiniCiv = new System.Windows.Forms.Button();
             this.separator = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
-            this.LabelDescriptionText = new System.Windows.Forms.Label();
-            this.PanelGameStats = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.LabelLastPlayed = new System.Windows.Forms.Label();
-            this.LabelGameDescription = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ButtonInstall = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelGameName = new System.Windows.Forms.Label();
             this.LauncherToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.MainPanelHolder = new System.Windows.Forms.Panel();
             this.TopPanel.SuspendLayout();
             this.Sidebar.SuspendLayout();
-            this.MainPanel.SuspendLayout();
-            this.PanelGameStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -184,32 +173,32 @@
             // 
             this.Sidebar.AutoScroll = true;
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Sidebar.Controls.Add(this.buttonAppMiniCiv);
+            this.Sidebar.Controls.Add(this.ButtonAppMiniCiv);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.Sidebar.Location = new System.Drawing.Point(2, 50);
             this.Sidebar.Name = "Sidebar";
             this.Sidebar.Size = new System.Drawing.Size(200, 448);
             this.Sidebar.TabIndex = 14;
             // 
-            // buttonAppMiniCiv
+            // ButtonAppMiniCiv
             // 
-            this.buttonAppMiniCiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonAppMiniCiv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.buttonAppMiniCiv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.buttonAppMiniCiv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.buttonAppMiniCiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAppMiniCiv.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAppMiniCiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonAppMiniCiv.Image = ((System.Drawing.Image)(resources.GetObject("buttonAppMiniCiv.Image")));
-            this.buttonAppMiniCiv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAppMiniCiv.Location = new System.Drawing.Point(0, 0);
-            this.buttonAppMiniCiv.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonAppMiniCiv.Name = "buttonAppMiniCiv";
-            this.buttonAppMiniCiv.Size = new System.Drawing.Size(200, 40);
-            this.buttonAppMiniCiv.TabIndex = 1;
-            this.buttonAppMiniCiv.Text = "  MiniCiv";
-            this.buttonAppMiniCiv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAppMiniCiv.UseVisualStyleBackColor = false;
+            this.ButtonAppMiniCiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ButtonAppMiniCiv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.ButtonAppMiniCiv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
+            this.ButtonAppMiniCiv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ButtonAppMiniCiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAppMiniCiv.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAppMiniCiv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonAppMiniCiv.Image = ((System.Drawing.Image)(resources.GetObject("ButtonAppMiniCiv.Image")));
+            this.ButtonAppMiniCiv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAppMiniCiv.Location = new System.Drawing.Point(0, 0);
+            this.ButtonAppMiniCiv.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonAppMiniCiv.Name = "ButtonAppMiniCiv";
+            this.ButtonAppMiniCiv.Size = new System.Drawing.Size(200, 40);
+            this.ButtonAppMiniCiv.TabIndex = 1;
+            this.ButtonAppMiniCiv.Text = "  MiniCiv";
+            this.ButtonAppMiniCiv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonAppMiniCiv.UseVisualStyleBackColor = false;
             // 
             // separator
             // 
@@ -220,123 +209,19 @@
             this.separator.Size = new System.Drawing.Size(2, 448);
             this.separator.TabIndex = 15;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.AutoScroll = true;
-            this.MainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MainPanel.Controls.Add(this.LabelDescriptionText);
-            this.MainPanel.Controls.Add(this.PanelGameStats);
-            this.MainPanel.Controls.Add(this.LabelGameDescription);
-            this.MainPanel.Controls.Add(this.panel3);
-            this.MainPanel.Controls.Add(this.ButtonInstall);
-            this.MainPanel.Controls.Add(this.panel1);
-            this.MainPanel.Controls.Add(this.LabelGameName);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(204, 50);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(744, 448);
-            this.MainPanel.TabIndex = 16;
-            // 
-            // LabelDescriptionText
-            // 
-            this.LabelDescriptionText.AutoSize = true;
-            this.LabelDescriptionText.Location = new System.Drawing.Point(24, 190);
-            this.LabelDescriptionText.MaximumSize = new System.Drawing.Size(650, 0);
-            this.LabelDescriptionText.Name = "LabelDescriptionText";
-            this.LabelDescriptionText.Size = new System.Drawing.Size(649, 364);
-            this.LabelDescriptionText.TabIndex = 5;
-            this.LabelDescriptionText.Text = resources.GetString("LabelDescriptionText.Text");
-            // 
-            // PanelGameStats
-            // 
-            this.PanelGameStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PanelGameStats.Controls.Add(this.label1);
-            this.PanelGameStats.Controls.Add(this.LabelLastPlayed);
-            this.PanelGameStats.Location = new System.Drawing.Point(250, 65);
-            this.PanelGameStats.Name = "PanelGameStats";
-            this.PanelGameStats.Size = new System.Drawing.Size(417, 100);
-            this.PanelGameStats.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(12, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Total Play Time: 0 Hours";
-            // 
-            // LabelLastPlayed
-            // 
-            this.LabelLastPlayed.AutoSize = true;
-            this.LabelLastPlayed.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelLastPlayed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LabelLastPlayed.Location = new System.Drawing.Point(12, 19);
-            this.LabelLastPlayed.Name = "LabelLastPlayed";
-            this.LabelLastPlayed.Size = new System.Drawing.Size(174, 22);
-            this.LabelLastPlayed.TabIndex = 5;
-            this.LabelLastPlayed.Text = "Last Played:       Never";
-            // 
-            // LabelGameDescription
-            // 
-            this.LabelGameDescription.AutoSize = true;
-            this.LabelGameDescription.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGameDescription.Location = new System.Drawing.Point(23, 150);
-            this.LabelGameDescription.Name = "LabelGameDescription";
-            this.LabelGameDescription.Size = new System.Drawing.Size(105, 24);
-            this.LabelGameDescription.TabIndex = 3;
-            this.LabelGameDescription.Text = "Description";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel3.Location = new System.Drawing.Point(20, 177);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(650, 2);
-            this.panel3.TabIndex = 2;
-            // 
-            // ButtonInstall
-            // 
-            this.ButtonInstall.AutoSize = true;
-            this.ButtonInstall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ButtonInstall.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.ButtonInstall.FlatAppearance.BorderSize = 2;
-            this.ButtonInstall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.ButtonInstall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.ButtonInstall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonInstall.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonInstall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonInstall.Location = new System.Drawing.Point(20, 80);
-            this.ButtonInstall.Name = "ButtonInstall";
-            this.ButtonInstall.Size = new System.Drawing.Size(160, 50);
-            this.ButtonInstall.TabIndex = 2;
-            this.ButtonInstall.Text = "Install";
-            this.ButtonInstall.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.panel1.Location = new System.Drawing.Point(20, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 2);
-            this.panel1.TabIndex = 1;
-            // 
-            // LabelGameName
-            // 
-            this.LabelGameName.AutoSize = true;
-            this.LabelGameName.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelGameName.Location = new System.Drawing.Point(20, 10);
-            this.LabelGameName.Name = "LabelGameName";
-            this.LabelGameName.Size = new System.Drawing.Size(119, 40);
-            this.LabelGameName.TabIndex = 0;
-            this.LabelGameName.Text = "MiniCiv";
-            // 
             // LauncherToolTip
             // 
             this.LauncherToolTip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.LauncherToolTip.ForeColor = System.Drawing.Color.White;
+            // 
+            // MainPanelHolder
+            // 
+            this.MainPanelHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MainPanelHolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanelHolder.Location = new System.Drawing.Point(204, 50);
+            this.MainPanelHolder.Name = "MainPanelHolder";
+            this.MainPanelHolder.Size = new System.Drawing.Size(744, 448);
+            this.MainPanelHolder.TabIndex = 16;
             // 
             // LauncherForm
             // 
@@ -345,7 +230,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(950, 500);
             this.ControlBox = false;
-            this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.MainPanelHolder);
             this.Controls.Add(this.separator);
             this.Controls.Add(this.Sidebar);
             this.Controls.Add(this.TopPanel);
@@ -362,10 +247,6 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.Sidebar.ResumeLayout(false);
-            this.MainPanel.ResumeLayout(false);
-            this.MainPanel.PerformLayout();
-            this.PanelGameStats.ResumeLayout(false);
-            this.PanelGameStats.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -379,22 +260,13 @@
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Button ButtonExit;
         private System.Windows.Forms.Panel Sidebar;
-        private System.Windows.Forms.Button buttonAppMiniCiv;
         private System.Windows.Forms.Panel separator;
         private System.Windows.Forms.Button ButtonMinimize;
         private System.Windows.Forms.Button ButtonSettings;
         private System.Windows.Forms.ToolTip LauncherToolTip;
-        private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Label labelLibrary;
-        private System.Windows.Forms.Label LabelGameName;
-        private System.Windows.Forms.Button ButtonInstall;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label LabelGameDescription;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label LabelDescriptionText;
-        private System.Windows.Forms.Panel PanelGameStats;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label LabelLastPlayed;
+        private System.Windows.Forms.Button ButtonAppMiniCiv;
+        private System.Windows.Forms.Panel MainPanelHolder;
     }
 }
 

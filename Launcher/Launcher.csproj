@@ -73,6 +73,12 @@
     <Compile Include="LibraryManagement.Designer.cs">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainGamePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainGamePanel.Designer.cs">
+      <DependentUpon>MainGamePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsDownloading.cs">
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LibraryManagement.resx">
       <DependentUpon>LibraryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGamePanel.resx">
+      <DependentUpon>MainGamePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
