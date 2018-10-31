@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.outlineLeft = new System.Windows.Forms.Panel();
             this.outlineRight = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,7 +38,6 @@
             this.labelLibraries = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.separator1 = new System.Windows.Forms.Panel();
             this.PanelBottom = new System.Windows.Forms.Panel();
             this.ButtonLibrariesClose = new System.Windows.Forms.Button();
             this.ButtonAddLibrary = new System.Windows.Forms.Button();
@@ -94,11 +93,11 @@
             // labelLibraries
             // 
             this.labelLibraries.AutoSize = true;
-            this.labelLibraries.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLibraries.ForeColor = System.Drawing.Color.Silver;
+            this.labelLibraries.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLibraries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelLibraries.Location = new System.Drawing.Point(0, 2);
             this.labelLibraries.Name = "labelLibraries";
-            this.labelLibraries.Size = new System.Drawing.Size(158, 22);
+            this.labelLibraries.Size = new System.Drawing.Size(155, 24);
             this.labelLibraries.TabIndex = 5;
             this.labelLibraries.Text = "Library Locations";
             // 
@@ -106,8 +105,8 @@
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.Silver;
@@ -117,11 +116,11 @@
             this.buttonExit.TabIndex = 4;
             this.buttonExit.Text = "✕";
             this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.TopPanel.Controls.Add(this.labelLibraries);
             this.TopPanel.Controls.Add(this.buttonExit);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -132,51 +131,49 @@
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
             // 
-            // separator1
-            // 
-            this.separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.separator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.separator1.Location = new System.Drawing.Point(2, 30);
-            this.separator1.Name = "separator1";
-            this.separator1.Size = new System.Drawing.Size(796, 2);
-            this.separator1.TabIndex = 21;
-            // 
             // PanelBottom
             // 
-            this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.PanelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.PanelBottom.Controls.Add(this.ButtonLibrariesClose);
             this.PanelBottom.Controls.Add(this.ButtonAddLibrary);
             this.PanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelBottom.Location = new System.Drawing.Point(2, 218);
+            this.PanelBottom.Location = new System.Drawing.Point(2, 216);
             this.PanelBottom.Name = "PanelBottom";
-            this.PanelBottom.Size = new System.Drawing.Size(796, 30);
+            this.PanelBottom.Size = new System.Drawing.Size(796, 32);
             this.PanelBottom.TabIndex = 22;
             // 
             // ButtonLibrariesClose
             // 
             this.ButtonLibrariesClose.AutoSize = true;
-            this.ButtonLibrariesClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.ButtonLibrariesClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ButtonLibrariesClose.FlatAppearance.BorderSize = 0;
+            this.ButtonLibrariesClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ButtonLibrariesClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ButtonLibrariesClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonLibrariesClose.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonLibrariesClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonLibrariesClose.Location = new System.Drawing.Point(689, 3);
+            this.ButtonLibrariesClose.Location = new System.Drawing.Point(690, 2);
             this.ButtonLibrariesClose.Name = "ButtonLibrariesClose";
-            this.ButtonLibrariesClose.Size = new System.Drawing.Size(104, 25);
+            this.ButtonLibrariesClose.Size = new System.Drawing.Size(104, 28);
             this.ButtonLibrariesClose.TabIndex = 1;
             this.ButtonLibrariesClose.Text = "Close";
             this.ButtonLibrariesClose.UseVisualStyleBackColor = false;
-            this.ButtonLibrariesClose.Click += new System.EventHandler(this.buttonExit_Click);
+            this.ButtonLibrariesClose.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // ButtonAddLibrary
             // 
             this.ButtonAddLibrary.AutoSize = true;
-            this.ButtonAddLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.ButtonAddLibrary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.ButtonAddLibrary.FlatAppearance.BorderSize = 0;
+            this.ButtonAddLibrary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ButtonAddLibrary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ButtonAddLibrary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAddLibrary.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAddLibrary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonAddLibrary.Location = new System.Drawing.Point(4, 3);
+            this.ButtonAddLibrary.Location = new System.Drawing.Point(2, 2);
+            this.ButtonAddLibrary.Margin = new System.Windows.Forms.Padding(1);
             this.ButtonAddLibrary.Name = "ButtonAddLibrary";
-            this.ButtonAddLibrary.Size = new System.Drawing.Size(104, 25);
+            this.ButtonAddLibrary.Size = new System.Drawing.Size(125, 28);
             this.ButtonAddLibrary.TabIndex = 0;
             this.ButtonAddLibrary.Text = "Add Library Folder";
             this.ButtonAddLibrary.UseVisualStyleBackColor = false;
@@ -190,7 +187,7 @@
             // 
             this.Results.Controls.Add(this.dataGridViewResults);
             this.Results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Results.Location = new System.Drawing.Point(2, 32);
+            this.Results.Location = new System.Drawing.Point(2, 30);
             this.Results.Name = "Results";
             this.Results.Size = new System.Drawing.Size(796, 186);
             this.Results.TabIndex = 25;
@@ -199,42 +196,42 @@
             // 
             this.dataGridViewResults.AllowUserToAddRows = false;
             this.dataGridViewResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewResults.BackgroundColor = System.Drawing.Color.Gray;
+            this.dataGridViewResults.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewResults.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.libLocation,
             this.libDefault,
             this.libFreeSpace,
             this.libTotalSpace});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewResults.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewResults.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewResults.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewResults.Name = "dataGridViewResults";
             this.dataGridViewResults.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewResults.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewResults.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewResults.Size = new System.Drawing.Size(796, 186);
             this.dataGridViewResults.TabIndex = 0;
             // 
@@ -277,7 +274,6 @@
             this.ClientSize = new System.Drawing.Size(800, 250);
             this.Controls.Add(this.Results);
             this.Controls.Add(this.PanelBottom);
-            this.Controls.Add(this.separator1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.outlineLeft);
             this.Controls.Add(this.outlineRight);
@@ -306,7 +302,6 @@
         private System.Windows.Forms.Label labelLibraries;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Panel TopPanel;
-        private System.Windows.Forms.Panel separator1;
         private System.Windows.Forms.Panel PanelBottom;
         private System.Windows.Forms.Button ButtonLibrariesClose;
         private System.Windows.Forms.Button ButtonAddLibrary;

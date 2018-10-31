@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Launcher
 {
@@ -26,12 +27,32 @@ namespace Launcher
             // Once loaded, check for updates
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void menuStripItemSettings_Click(object sender, EventArgs e)
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePos;
+            }
+        }
+
+        private void ButtonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ButtonSettings_Click(object sender, EventArgs e)
         {
             bool isOpen = false;
             foreach (Form f in Application.OpenForms)
@@ -47,21 +68,6 @@ namespace Launcher
             {
                 SettingsScreen settings = new SettingsScreen();
                 settings.Show();
-            }
-        }
-
-        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouseLocation = new Point(-e.X, -e.Y);
-        }
-
-        private void TopPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                Point mousePos = Control.MousePosition;
-                mousePos.Offset(mouseLocation.X, mouseLocation.Y);
-                Location = mousePos;
             }
         }
     }

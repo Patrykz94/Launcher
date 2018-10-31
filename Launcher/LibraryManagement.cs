@@ -23,8 +23,7 @@ namespace Launcher
 
             if (!File.Exists(libraryFile))
             {
-                XmlDocument doc = new XmlDocument();
-                doc.PreserveWhitespace = true;
+                XmlDocument doc = new XmlDocument { PreserveWhitespace = true };
                 doc.LoadXml("<libraries>\n" +
                 "<library>" + LocationsManager.defAppDir + "</library>\n" +
                 "</libraries>");
@@ -87,7 +86,7 @@ namespace Launcher
             return totalSpace;
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -19,7 +19,7 @@ namespace Launcher
             InitializeComponent();
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
+        private void ButtonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

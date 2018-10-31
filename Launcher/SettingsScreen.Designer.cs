@@ -35,9 +35,9 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.labelSettings = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.separator1 = new System.Windows.Forms.Panel();
             this.SettingsPanel = new System.Windows.Forms.Panel();
             this.buttonDownloadSettings = new System.Windows.Forms.Button();
+            this.separator = new System.Windows.Forms.Panel();
             this.settingsDownloading = new Launcher.SettingsDownloading();
             this.TopPanel.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.TopPanel.Controls.Add(this.labelSettings);
             this.TopPanel.Controls.Add(this.buttonExit);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -95,11 +95,11 @@
             // labelSettings
             // 
             this.labelSettings.AutoSize = true;
-            this.labelSettings.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSettings.ForeColor = System.Drawing.Color.Silver;
+            this.labelSettings.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.labelSettings.Location = new System.Drawing.Point(0, 2);
             this.labelSettings.Name = "labelSettings";
-            this.labelSettings.Size = new System.Drawing.Size(80, 22);
+            this.labelSettings.Size = new System.Drawing.Size(79, 24);
             this.labelSettings.TabIndex = 5;
             this.labelSettings.Text = "Settings";
             // 
@@ -107,8 +107,8 @@
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.Color.Silver;
@@ -118,61 +118,65 @@
             this.buttonExit.TabIndex = 4;
             this.buttonExit.Text = "✕";
             this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // separator1
-            // 
-            this.separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.separator1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.separator1.Location = new System.Drawing.Point(2, 30);
-            this.separator1.Name = "separator1";
-            this.separator1.Size = new System.Drawing.Size(596, 2);
-            this.separator1.TabIndex = 17;
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // SettingsPanel
             // 
-            this.SettingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.SettingsPanel.AutoScroll = true;
+            this.SettingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SettingsPanel.Controls.Add(this.buttonDownloadSettings);
             this.SettingsPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SettingsPanel.Location = new System.Drawing.Point(2, 32);
+            this.SettingsPanel.Location = new System.Drawing.Point(2, 30);
             this.SettingsPanel.Name = "SettingsPanel";
-            this.SettingsPanel.Size = new System.Drawing.Size(175, 416);
+            this.SettingsPanel.Size = new System.Drawing.Size(175, 418);
             this.SettingsPanel.TabIndex = 18;
             // 
             // buttonDownloadSettings
             // 
+            this.buttonDownloadSettings.BackColor = System.Drawing.Color.Silver;
             this.buttonDownloadSettings.FlatAppearance.BorderSize = 0;
-            this.buttonDownloadSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.buttonDownloadSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDownloadSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.buttonDownloadSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.buttonDownloadSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownloadSettings.Font = new System.Drawing.Font("Helvetica", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDownloadSettings.ForeColor = System.Drawing.Color.Silver;
+            this.buttonDownloadSettings.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDownloadSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.buttonDownloadSettings.Location = new System.Drawing.Point(0, 0);
             this.buttonDownloadSettings.Name = "buttonDownloadSettings";
-            this.buttonDownloadSettings.Size = new System.Drawing.Size(175, 24);
+            this.buttonDownloadSettings.Size = new System.Drawing.Size(175, 28);
             this.buttonDownloadSettings.TabIndex = 0;
             this.buttonDownloadSettings.Text = "Downloading";
             this.buttonDownloadSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDownloadSettings.UseVisualStyleBackColor = true;
+            this.buttonDownloadSettings.UseVisualStyleBackColor = false;
+            // 
+            // separator
+            // 
+            this.separator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.separator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.separator.Location = new System.Drawing.Point(177, 30);
+            this.separator.Name = "separator";
+            this.separator.Size = new System.Drawing.Size(2, 418);
+            this.separator.TabIndex = 20;
             // 
             // settingsDownloading
             // 
-            this.settingsDownloading.BackColor = System.Drawing.Color.Gray;
-            this.settingsDownloading.Location = new System.Drawing.Point(177, 32);
+            this.settingsDownloading.AutoScroll = true;
+            this.settingsDownloading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.settingsDownloading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingsDownloading.Location = new System.Drawing.Point(179, 30);
             this.settingsDownloading.Name = "settingsDownloading";
-            this.settingsDownloading.Size = new System.Drawing.Size(421, 416);
-            this.settingsDownloading.TabIndex = 19;
+            this.settingsDownloading.Size = new System.Drawing.Size(419, 418);
+            this.settingsDownloading.TabIndex = 21;
             // 
             // SettingsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(600, 450);
             this.ControlBox = false;
             this.Controls.Add(this.settingsDownloading);
+            this.Controls.Add(this.separator);
             this.Controls.Add(this.SettingsPanel);
-            this.Controls.Add(this.separator1);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.outlineLeft);
             this.Controls.Add(this.outlineRight);
@@ -197,10 +201,10 @@
         private System.Windows.Forms.Panel outlineTop;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Panel separator1;
         private System.Windows.Forms.Label labelSettings;
         private System.Windows.Forms.Panel SettingsPanel;
         private System.Windows.Forms.Button buttonDownloadSettings;
+        private System.Windows.Forms.Panel separator;
         private SettingsDownloading settingsDownloading;
     }
 }
