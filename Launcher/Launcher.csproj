@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GamesLibrary.cs" />
     <Compile Include="LocationsManager.cs" />
     <Compile Include="Launcher.cs">
       <SubType>Form</SubType>

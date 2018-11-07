@@ -184,6 +184,7 @@
             // 
             this.ButtonAppMiniCiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ButtonAppMiniCiv.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.ButtonAppMiniCiv.FlatAppearance.BorderSize = 0;
             this.ButtonAppMiniCiv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
             this.ButtonAppMiniCiv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
             this.ButtonAppMiniCiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

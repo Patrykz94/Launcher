@@ -15,7 +15,7 @@ namespace Launcher
     public partial class LibraryManagement : Form
     {
         public Point mouseLocation;
-        private string libraryFile = LocationsManager.dataDir + "\\libraries.xml";
+        private string libraryFile = LocationsManager.dataDirectory + "\\libraries.xml";
 
         public LibraryManagement()
         {
@@ -25,7 +25,7 @@ namespace Launcher
             {
                 XmlDocument doc = new XmlDocument { PreserveWhitespace = true };
                 doc.LoadXml("<libraries>\n" +
-                "<library>" + LocationsManager.defAppDir + "</library>\n" +
+                "<library>" + LocationsManager.defaultAppDirecory + "</library>\n" +
                 "</libraries>");
                 doc.Save(libraryFile);
             }

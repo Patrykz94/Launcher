@@ -12,12 +12,16 @@ namespace Launcher
         public LocationsManager()
         {
             // Check if directories exist and create missing ones
-            if (!Directory.Exists(dataDir)) Directory.CreateDirectory(dataDir);
-            if (!Directory.Exists(defAppDir)) Directory.CreateDirectory(defAppDir);
+            if (!Directory.Exists(dataDirectory)) Directory.CreateDirectory(dataDirectory);
+            if (!Directory.Exists(defaultAppDirecory)) Directory.CreateDirectory(defaultAppDirecory);
+            if (!Directory.Exists(appResources)) Directory.CreateDirectory(appResources);
+            if (!Directory.Exists(appIcons)) Directory.CreateDirectory(appIcons);
         }
 
-        public static string mainDir = Environment.CurrentDirectory;
-        public static string dataDir = mainDir + "\\Data";
-        public static string defAppDir = mainDir + "\\LauncherLibrary";
+        public static string mainDirectory = Environment.CurrentDirectory;
+        public static string dataDirectory = mainDirectory + "\\Data";
+        public static string defaultAppDirecory = mainDirectory + "\\LauncherLibrary";
+        public static string appResources = dataDirectory + "\\GameRes";
+        public static string appIcons = appResources + "\\Icons";
     }
 }

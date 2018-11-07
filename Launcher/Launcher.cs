@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Launcher
 {
     public partial class LauncherForm : Form
     {
         public Point mouseLocation;
+        GamesLibrary gamesLib = new GamesLibrary();
+        int numGames = 0;
 
         public LauncherForm()
         {
@@ -24,83 +25,49 @@ namespace Launcher
 
         public void PopulateLibrary()
         {
-            string gameLocations = LocationsManager.dataDir + "\\libFiles";
-            string gameLocationsFile = gameLocations + "\\main.xml";
-            XmlDocument doc = new XmlDocument();
-            try
+            // Remove all game buttons that are currently visible in the library
+            // Using a for loop in reverse as forward loops don't work well
+            // when removing elements from it midrun
+            for (var b = Sidebar.Controls.OfType<Button>().Count() - 1; b >= 0; b--)
             {
-                doc.Load(gameLocationsFile);
-                XmlNode root = doc.FirstChild;
-                XmlNodeList nodeList = root.SelectNodes("descendant::download");
-                List<string> downloads = new List<string>();
-
-                foreach (XmlNode n in nodeList)
+                if (Sidebar.Controls.OfType<Button>().ElementAt(b).Name.StartsWith("ButtonApp"))
                 {
-                    if (n.HasChildNodes)
-                    {
-                        foreach (XmlNode c in n.ChildNodes)
-                        {
-                            if (c.Name == "infoFile")
-                            {
-                                downloads.Add(c.InnerText);
-                            }
-                        }
-                    }
-                }
-
-                int i = 0;
-                foreach (Button b in Sidebar.Controls.OfType<Button>())
-                {
-                    if (b.Name.StartsWith("ButtonApp"))
-                    {
-                        Sidebar.Controls.Remove(b);
-                    }
-                }
-
-                foreach (string d in downloads)
-                {
-                    XmlDocument game = new XmlDocument();
-                    try
-                    {
-                        game.Load(gameLocations + d);
-                        string title = game.DocumentElement.SelectSingleNode("title").InnerText;
-                        string iconPath = gameLocations + game.DocumentElement.SelectSingleNode("icon").InnerText;
-
-                        Button btn = new Button();
-                        btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-                        btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-                        btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-                        btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-                        btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                        btn.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                        btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-                        btn.Image = Image.FromFile(iconPath);
-                        btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-                        btn.Location = new System.Drawing.Point(0, i * 40);
-                        btn.Margin = new System.Windows.Forms.Padding(0);
-                        btn.Name = "ButtonApp" + i.ToString();
-                        btn.Size = new System.Drawing.Size(200, 40);
-                        btn.Text = "  " + title;
-                        btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-                        btn.UseVisualStyleBackColor = false;
-                        btn.Click += new EventHandler(ButtonApp_Click);
-                        Sidebar.Controls.Add(btn);
-                        i++;
-                    }
-                    catch
-                    {
-
-                    }
+                    Sidebar.Controls.Remove(Sidebar.Controls.OfType<Button>().ElementAt(b));
                 }
             }
-            catch
-            {
 
+            // Add buttons for each game in the library
+            int i = 0;
+            foreach (GamesLibrary.Game g in gamesLib.GetAllGames())
+            {
+                Button btn = new Button();
+                btn.BackColor = Color.FromArgb(64, 64, 64);
+                btn.FlatAppearance.BorderColor = Color.FromArgb(32, 32, 32);
+                btn.FlatAppearance.BorderSize = 0;
+                btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(88, 88, 88);
+                btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(76, 76, 76);
+                btn.FlatStyle = FlatStyle.Flat;
+                btn.Font = new Font("Trebuchet MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+                btn.ForeColor = Color.FromArgb(224, 224, 224);
+                btn.Image = Image.FromFile(LocationsManager.appIcons + "\\" + g.iconFile);
+                btn.ImageAlign = ContentAlignment.MiddleLeft;
+                btn.Location = new Point(0, i * 40);
+                btn.Margin = new Padding(0);
+                btn.Name = "ButtonApp" + i.ToString();
+                btn.Size = new Size(200, 40);
+                btn.Text = "  " + g.name;
+                btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                btn.UseVisualStyleBackColor = false;
+                btn.Click += new EventHandler(ButtonApp_Click);
+                Sidebar.Controls.Add(btn);
+                i++;
             }
         }
 
         private void LauncherForm_Load(object sender, EventArgs e)
         {
+            gamesLib.LoadGames();
+            numGames = Math.Max(gamesLib.GetAllGames().Count, 0);
             PopulateLibrary();
             // Once loaded, check for updates
         }
@@ -152,32 +119,39 @@ namespace Launcher
         private void ButtonApp_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
+
             // Find the game description form and replace with the one corresponding to the button clicked
-            foreach (MainGamePanel p in Form.ActiveForm.Controls.OfType<MainGamePanel>())
+            MainGamePanel oldPanel = new MainGamePanel();
+            foreach (MainGamePanel p in MainPanelHolder.Controls.OfType<MainGamePanel>())
             {
                 if (p.Name == "MainGamePanel")
                 {
-                    Form.ActiveForm.Controls.Remove(p);
+                    oldPanel = p;
                 }
             }
 
-            string gameInfoFile = LocationsManager.dataDir + "\\libFiles\\downloads\\" + button.Text.Substring(2) + "\\info.xml";
-            XmlDocument doc = new XmlDocument();
-            doc.Load(gameInfoFile);
+            int gameID = int.Parse(button.Name.Substring(9));
+            GamesLibrary.Game game = gamesLib.GetGame(gameID);
 
-            MainGamePanel mainPanel = new MainGamePanel();
+            if (game != null)
+            {
+                MainGamePanel mainPanel = new MainGamePanel();
 
-            mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+                mainPanel.Dock = DockStyle.Fill;
 
-            MainPanelHolder.Controls.Add(mainPanel);
+                MainPanelHolder.Controls.Add(mainPanel);
 
-            // Set title of the game
-            Control[] LabelGameName = mainPanel.Controls.Find("LabelGameName", true);
-            LabelGameName[0].Text = doc.DocumentElement.SelectSingleNode("title").InnerText;
+                // Set title of the game
+                Control[] LabelGameName = mainPanel.Controls.Find("LabelGameName", true);
+                LabelGameName[0].Text = game.name;
 
-            // Set title of the game
-            Control[] LabelDescriptionText = mainPanel.Controls.Find("LabelDescriptionText", true);
-            LabelDescriptionText[0].Text = doc.DocumentElement.SelectSingleNode("description").InnerText;
+                // Set title of the game
+                Control[] LabelDescriptionText = mainPanel.Controls.Find("LabelDescriptionText", true);
+                LabelDescriptionText[0].Text = game.description;
+
+                // Remove old panel
+                MainPanelHolder.Controls.Remove(oldPanel);
+            }
         }
     }
 }
